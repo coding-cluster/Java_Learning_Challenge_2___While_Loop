@@ -8,18 +8,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        boolean exit = false;
-        float totalSum = 0;
-        while (!exit) {
+        double totalSum = 0;
+
+        while (true) {
             System.out.print("Please, input a number: ");
-            float n = scanner.nextFloat();
+            double n = scanner.nextDouble();
 
             if (n == 0) {
-                System.out.println("The sum is equal to: " + totalSum);
-                exit = true;
+                break;
             }
 
             totalSum += n;
         }
+
+        System.out.println("The sum is equal to: " + totalSum);
     }
 }
